@@ -1,0 +1,261 @@
+/* Reseta margens e paddings padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7; /* Fundo suave */
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 320px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 26px;
+    color: #000000b0; /* Cor suave, tom pastel */
+    font-weight: 400;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000b0; /* Cor suave para os links */
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+/* Seção Início */
+#inicio {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha as imagens e textos no topo */
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+    flex-wrap: wrap; /* Para se ajustar em telas pequenas */
+}
+
+.intro-content img {
+    max-width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.intro-content p {
+    max-width: 50%;
+    font-size: 19px;
+    color: #000000;
+    line-height: 1.8;
+    text-align: justify; /* Justifica apenas o texto do parágrafo */
+}
+
+/* Seção Sobre Nós */
+#sobre {
+    position: relative;
+    padding: 40px 60px;
+    text-align: center;
+    color: #000000; /* Cor do texto */
+}
+
+/* Pseudo-elemento para a imagem com opacidade */
+#sobre::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imagens/imagem8.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Opacidade da imagem */
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
+#sobre h2 {
+    font-size: 33px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.8;
+    text-align: justify; /* Justifica o texto do parágrafo */
+}
+
+/* Seção Galeria */
+#galeria {
+    background-color: #fff;
+    padding: 40px 60px;
+    text-align: center;
+}
+
+#galeria h2 {
+    font-size: 33px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza as imagens no meio da página */
+    gap: 20px;
+    max-width: 960px; /* Limita a largura máxima das imagens */
+    margin: 0 auto; /* Centraliza o conteúdo da galeria */
+}
+
+.gallery-images img {
+    width: 30%; /* Ajusta o tamanho das imagens para 30% da largura */
+    height: auto; /* Deixe a altura automática */
+    aspect-ratio: 1; /* Garante que as imagens tenham uma proporção 1:1 */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Animação para o efeito de aumento */
+    object-fit: cover; /* Garante que a imagem preencha a área sem distorção */
+}
+
+/* Efeito de zoom nas imagens */
+.gallery-images img:hover {
+    transform: scale(1.1); /* Aumenta a imagem 10% quando passar o mouse */
+}
+
+/* Estilização para o player do Spotify */
+.spotify-player {
+    margin-top: 20px;
+    text-align: center; /* Centraliza o player */
+}
+
+.spotify-player iframe {
+    max-width: 100%;
+    border-radius: 12px; /* Ajuste no border-radius se necessário */
+}
+
+/* Estilo para o link ativo */
+nav a.active {
+    color: #D6A3E7; /* Cor diferente para destacar o link ativo */
+    font-weight: bold; /* Torna o link mais destacado */
+}
+
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .gallery-images img {
+        width: 45%; /* Ajusta as imagens para 2 por linha em telas menores */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-images img {
+        width: 100%; /* Ajusta as imagens para 1 por linha em telas muito pequenas */
+    }
+}
+/* Aplica a fonte Baskerville nos títulos e seções específicas */
+
+/* Títulos principais */
+h1, h2 {
+    font-family: 'Baskerville', serif;
+}
+
+/* Seção Sobre Nós */
+#sobre h2 {
+    font-family: 'Baskerville', serif;
+}
+
+/* Seção Galeria */
+#galeria h2 {
+    font-family: 'Baskerville', serif;
+}
+
+/* Seção Com Amor Juca */
+#inicio h2 {
+    font-family: 'Baskerville', serif;
+}
+
+/* Para Relembrar o que Somos */
+#relembrar h2 {
+    font-family: 'Baskerville', serif;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+/* Rodapé */
+#rodape {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#rodape .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#rodape p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+#rodape .social-links {
+    margin-top: 10px;
+}
+
+#rodape .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+#rodape .social-links a:hover {
+    color: #D6A3E7; /* Cor ao passar o mouse */
+}
